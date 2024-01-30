@@ -1,0 +1,47 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding:  0;
+}
+body{
+    background-color: hwb(0 1% 91%);
+    color: white;
+}
+
+
+header{
+    
+    /* background-color: #0085b9; */
+    color:#f1f0f0
+}
+
+header>.content{
+    position: relative;
+    padding: 4rem;
+    
+}
+img{
+    max-width: 400px;
+}
+
+.slash-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: -1;
+}
+
+.slash-background svg {
+    position: relative;
+    display: block;
+    width: calc(169% + 1.3px);
+    height: 600px;
+    transform: rotateY(180deg);
+}
+
+.slash-background .shape-fill {
+    fill:  #690000;
+}

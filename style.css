@@ -9,21 +9,59 @@ body{
 }
 
 
-header{
+header,section{
     
     /* background-color: #0085b9; */
-    color:#f1f0f0
+    color:#f1f0f0;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+    padding: 1.5rem 2rem; 
 }
 
 header>.content{
+
     position: relative;
-    padding: 4rem;
-    
+    display: flex;
+    flex-direction: column;
 }
-img{
+/* img{
     max-width: 400px;
+    
+} */
+
+p{
+    margin-bottom: 2rem;
 }
 
+i,span.mdi{
+    font-size: 1.5rem;
+    margin: 0 1.5rem;
+    cursor: pointer;
+}
+
+.mypic{
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom:2rem ;
+}
+
+.portfolio-pic{
+    width: 100%;
+    
+}
+
+.my-name{
+    position: absolute;
+    bottom: 10px;
+    font-size: 4rem;
+    width: 100%;
+    padding: 0 1.5rem;
+    letter-spacing: .2rem;
+}
+
+/* Header background svg */
 .slash-background {
     position: absolute;
     top: 0;
@@ -44,4 +82,56 @@ img{
 
 .slash-background .shape-fill {
     fill:  #690000;
+}
+
+
+.title{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: .7rem;
+}
+
+.social-icons{
+    text-align: center;
+}
+
+
+.projects-wrapper{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.project{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    min-width: 100%;
+    gap: .8rem;
+}
+.project-img{
+    height: 250px;
+    background-color: blue;
+}
+.project-detail-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.project-link-wrapper > i, .project-link-wrapper> span.mdi{
+    font-size: 1.4rem;
+    margin: 0 .4rem;
+
+}
+
+footer{
+    color: #f1f0f0;
+    margin: 0 auto;    
+    padding: 1.5rem 2rem;
+    background-color: #690000;
+}
+
+.footer-img{
+    width: 100%;
+    max-width: 400px;
 }

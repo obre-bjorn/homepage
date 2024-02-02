@@ -6,6 +6,8 @@
 body{
     background-color: hwb(0 1% 91%);
     color: white;
+    font-size: 1.6rem;
+
 }
 
 
@@ -23,6 +25,19 @@ header>.content{
     position: relative;
     display: flex;
     flex-direction: column;
+    width: 80%;
+    max-width: 100%;
+    margin: 0 auto;;
+    /* padding: 2rem; */
+    
+    
+}
+.float{
+    display:none;
+}
+.about-me{
+    padding: 2rem;
+    background-color: cadetblue;
 }
 /* img{
     max-width: 400px;
@@ -30,7 +45,7 @@ header>.content{
 } */
 
 p{
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
 }
 
 i,span.mdi{
@@ -40,15 +55,16 @@ i,span.mdi{
 }
 
 .mypic{
+    align-self: flex-start;
     position: relative;
-    max-width: 400px;
     width: 100%;
+    max-width: 700px;
     margin: 0 auto;
     margin-bottom:2rem ;
 }
 
 .portfolio-pic{
-    width: 100%;
+    max-width: 100%;
     
 }
 
@@ -87,7 +103,7 @@ i,span.mdi{
 
 .title{
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: .7rem;
 }
 
@@ -99,6 +115,7 @@ i,span.mdi{
 .projects-wrapper{
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 4rem;
 }
@@ -106,8 +123,8 @@ i,span.mdi{
 .project{
     display: flex;
     flex-direction: column;
-    width: 400px;
-    min-width: 100%;
+    width: 350px;
+    max-width: 100%;
     gap: .8rem;
 }
 .project-img{
@@ -134,4 +151,66 @@ footer{
 .footer-img{
     width: 100%;
     max-width: 400px;
+}
+
+
+ @media  (min-width:700px) {
+    body{
+        padding-top: 6rem;
+    }
+
+    header>.content {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+            /* padding: rem 0; */
+
+        }
+        .mypic{
+            position: absolute;
+            top: -3rem;
+            left: -1rem;
+            width: 100%;
+            z-index: 2;
+            
+        }
+        .my-name{
+            font-size: 3rem;
+            position: absolute;
+            top: -1.5rem;
+            left: 16rem; 
+            width: auto;
+        }
+        .portfolio-pic{
+            display: none;
+        }
+        .about-me h1{
+            font-size: 3.5rem;
+        }
+        .about-me p{
+            font-size:1.5rem
+        }
+        .about-me img{
+            display: block !important;
+            margin: 0;
+            background-color: burlywood;
+            float: left;
+            max-width:320px; 
+            transform: translateX(-60px) translateY(-120px);
+            shape-outside: inset(50px 50px 120px 50px);
+            /* padding:2rem; */
+        }
+       
+        .content .social-icons{
+            display: none;
+        }
+        footer{
+            display: flex;
+        }
+       
+
+} 
+@media screen and (min-width: 1200px){
+
 }

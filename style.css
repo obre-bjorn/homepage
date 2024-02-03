@@ -7,7 +7,7 @@ body{
     background-color: hwb(0 1% 91%);
     color: white;
     font-size: 1.6rem;
-
+    overflow-x: hidden;
 }
 
 
@@ -17,6 +17,8 @@ header,section{
     color:#f1f0f0;
     margin: 0 auto;
     margin-bottom: 6rem;
+    max-width: 1100px;
+    width: 100%;
     padding: 1.5rem 2rem; 
 }
 
@@ -25,7 +27,8 @@ header>.content{
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 80%;
+    align-items: center;
+    
     max-width: 100%;
     margin: 0 auto;;
     /* padding: 2rem; */
@@ -38,6 +41,7 @@ header>.content{
 .about-me{
     padding: 2rem;
     background-color: cadetblue;
+    flex-grow: 1;
 }
 /* img{
     max-width: 400px;
@@ -55,14 +59,14 @@ i,span.mdi{
 }
 
 .mypic{
-    align-self: flex-start;
+    /* align-self: flex-start; */
     position: relative;
     width: 100%;
     max-width: 700px;
     margin: 0 auto;
-    margin-bottom:2rem ;
+    margin-bottom:2rem;
+    
 }
-
 .portfolio-pic{
     max-width: 100%;
     
@@ -115,20 +119,20 @@ i,span.mdi{
 .projects-wrapper{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
-    gap: 4rem;
+    gap:1rem
 }
 
 .project{
     display: flex;
     flex-direction: column;
-    width: 350px;
+    width: 300px;
     max-width: 100%;
     gap: .8rem;
 }
 .project-img{
-    height: 250px;
+    height: 350px;
     background-color: blue;
 }
 .project-detail-wrapper{
@@ -146,45 +150,57 @@ footer{
     margin: 0 auto;    
     padding: 1.5rem 2rem;
     background-color: #690000;
+    display:flex;
+    flex-direction: column; 
 }
 
 .footer-img{
     width: 100%;
-    max-width: 400px;
+}
+.footer-img img {
+    width: 100%;
 }
 
 
  @media  (min-width:700px) {
     body{
         padding-top: 6rem;
+        position: relative;
+    }
+    .title{
+        text-align: left;
     }
 
     header>.content {
-        position: relative;
+        /* position: relative; */
         display: flex;
         flex-direction: row;
         align-items: center;
             /* padding: rem 0; */
-
+        background-color: crimson;
         }
         .mypic{
-            position: absolute;
-            top: -3rem;
-            left: -1rem;
-            width: 100%;
+            width: 80%;
+            position:absolute;
+           
+            /* background-color: chartreuse; */
             z-index: 2;
-            
+           height: 100%;
         }
+        
         .my-name{
+            position: absolute;  
+            top: -4rem; 
+            right: 1rem;
             font-size: 3rem;
-            position: absolute;
-            top: -1.5rem;
-            left: 16rem; 
             width: auto;
+            /* background-color: chartreuse; */
         }
+
         .portfolio-pic{
             display: none;
         }
+
         .about-me h1{
             font-size: 3.5rem;
         }
@@ -207,10 +223,66 @@ footer{
         }
         footer{
             display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            background-color: darkorchid;
         }
+        footer .social-icons{
+            text-align: left;
+        }
+
+        .footer-img{
+            max-width: 500px;
+        }
+        
        
 
 } 
-@media screen and (min-width: 1200px){
+@media (min-width: 1000px){
+    .about-me{
+        height: 100%;
+    }
+    .content{
+        display: flex;
+        flex-direction: row; 
+        /* justify-content: center; */
+        /* align-items: center;   */
+    }
+    .portfolio-pic{
+        display: block;
+    }
 
+    .mypic {
+        align-self: flex-start;
+        position: static;
+        width: 100%;
+        height: 100%;
+        min-width: 400px;
+        max-width: 700px;
+        margin: 0 auto;
+        background-color: fuchsia;
+        /* margin-bottom: 2rem; */
+        }
+    .mypic{
+        position:relative;
+        /* right:0; */
+    }
+    
+    .my-name{
+        position: absolute;
+        /* bottom: 4rem; */
+        top: 0;
+        right:0;
+        left: 0;
+        top: 25rem;
+        font-size: 3rem;
+        width: 100%;
+        padding: 0 1.5rem;
+        /* letter-spacing: .2rem; */
+    }
+
+    .about-me img{
+        display: none !important;
+    }
 }
